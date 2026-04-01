@@ -1,0 +1,133 @@
+
+<html>
+    <head>
+        <title>Grid</title>
+        <style>
+            .container{
+                display:grid;
+                grid-template-areas:
+                "header header"
+                "nav nav"
+                "aside main"
+                "footer footer";
+                grid-template-rows:100px 40px 1fr 60px;
+                grid-template-columns:200px 1fr;
+                height:100vh;
+            }
+            header{
+                grid-area:header;
+                text-align:center;
+                background-color:purple;
+                color:yellow;
+            }
+            nav{
+                grid-area:nav;
+                background-color:pink;
+            }
+            aside{
+                grid-area:aside;
+                background-color:blanchedalmond;
+            }
+            main{
+                grid-area:main;
+                background-color:azure;
+            }
+            footer{
+                grid-area:footer;
+                background-color:pink;
+                text-align:center;
+            }
+            aside ul{
+                list-style-type:none;
+            }
+            aside ul li{
+                float:center;
+                display:block;
+                margin:3px 35px;
+            }
+            
+            nav ul{
+                list-style-type:none;
+            }
+            nav ul li{
+                float:left;
+                margin:0px 30px;
+                display:block;
+            }
+            @media(max-width:768px){
+                .container{
+                    grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+                 
+                    grid-template-columns:1fr;
+                    grid-template-rows:auto;
+                }
+                nav ul{
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    padding:0;
+                }
+                nav ul li{
+                    margin:10px 0;
+                    flex-direction:column;
+                    display:block;
+                    width:100%;
+                    text-align:center;
+                    padding:3px 0;
+                }
+                aside ul{
+                    text-align:center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h3>MY WEBPAGE</h3>
+                <p>Using CSS Grid</p>
+            </header>
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+            <aside>
+                <h3>SUB TITLES</h3>
+                <ul>
+                    <li>Module 1</li>
+                    <li>Module 2</li>
+                    <li>Module 3</li>
+                    <li>Module 4</li>
+                </ul>
+            </aside>
+            <main>
+                <h4 align="center">The Universe</h4>
+                <p style="text-indent:1cm">The universe is the vast space that contains everything that exists, including matter, energy, 
+                    space, and time. It consists of billions of galaxies such as the Milky Way, each containing 
+                    billions of stars. One of these stars is the Sun, which forms the center of our solar system. 
+                    Around the Sun revolve planets such as Earth, along with their natural satellites like the Moon. 
+                </p>
+                <img src="C:\Users\yogeswari\OneDrive\Pictures\images (6).jpg" style="margin-left:35%">
+                <p style="text-indent:1cm">The universe also contains other celestial bodies such as asteroids, comets like Halley's Comet, 
+                    meteoroids, interstellar gas, and cosmic dust. In addition, scientists believe that a large part 
+                    of the universe is made of invisible components called dark matter and dark energy. Thus, the 
+                    universe includes galaxies, stars, planetary systems, planets, moons, and many other celestial objects 
+                    that together form the cosmic structure.
+                </p>
+                <img src="C:\Users\yogeswari\OneDrive\Pictures\images (7).jpg" style="margin-left:35%">
+            </main>
+            <footer>
+                <p>&copy THANK YOU!</p>
+            </footer>
+        </div>
+    </body>
+</html>
